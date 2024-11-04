@@ -222,11 +222,15 @@ http://localhost:8080/doisv/passagem/delete/1
 git clone https://github.com/FilipeMagal/Passagens-Rodoviarias-API-REST.git
 ```
 ### Compile e execute a aplicação
-1. Após compilar
-2. Você irá receber uma Basic Authentication (ou Basic Auth) por conta do Spring Security
-3. Copie-o
-4. Vá para o postman
-5. Escolha alguma url e utilize a aplicação do jeito que desejar.
+1. Após compilar você irá receber uma Basic Authentication (ou Basic Auth) por conta do Spring Security
+2. Copie-o
+3. Vá para o postman
+4. Escolha o método HTTP da sua preferencia
+5. Clique em "Authorization"
+6. Escolha o tipo "Basic auth"
+7. No Username, escreva "user"
+8. No Password cole o que a aplicação disponibilizou para você após compilar.
+9. Escolha alguma url e utilize a aplicação do jeito que desejar.
 
 
 
