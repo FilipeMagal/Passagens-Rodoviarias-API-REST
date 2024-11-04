@@ -73,7 +73,7 @@ http://localhost:8080/doisv/cidade/delete/1
 ```
 ---
 1. ## Endpoint padrão para veiculo = /doisv/veiculo.
---
+---
 2. ### Listar todos os dados do veículo.
    
 - **Método:** GET
@@ -140,7 +140,7 @@ http://localhost:8080/doisv/veiculo/delete/1
 ```
 ---
 1. ## Endpoint padrão para passagem = /doisv/passagem.
---
+---
 2. ### Listar todos os dados das passagens.
    
 - **Método:** GET
