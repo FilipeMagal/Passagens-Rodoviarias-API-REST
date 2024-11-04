@@ -1,4 +1,4 @@
-# API de Cadastro de Veículos
+# API de Passagens Rodoviárias
 ---
 
 Este projeto é uma API RESTful desenvolvida com Spring Boot que permite o cadastro, atualização, exclusão e consulta de passagens rodoviária. proposto pela faculdade visconde de cairu.
