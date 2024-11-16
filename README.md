@@ -5,10 +5,14 @@ Projeto desenvolvido como proposta da **Faculdade Visconde de Cairu**, com o obj
 ---
 
 ## Endpoints da API
+---
 
 O endpoint padrão para gerenciamento de cidades no sistema é:  `/doisv/cidade`
+
 O endpoint padrão para gerenciamento de veiculos no sistema é: `/doisv/veiculo`
+
 O endpoint padrão para gerenciamento de passagens no sistema é: `/doisv/passagem`
+
 ---
 
 ### 1. Listar Todas as Cidades
