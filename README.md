@@ -250,13 +250,18 @@ http://localhost:8080/doisv/passagem/delete/1
 ## Como Executar a Aplicação
 
 ---
-1. Antes de tudo, pegue os scripts para o banco de dados:                                                                                                               CREATE TABLE cidade (
+1. Antes de tudo, pegue os scripts para o banco de dados:
+
+```bash
+CREATE TABLE cidade (
     idCidade VARCHAR(10) PRIMARY KEY,
     nomeCidade VARCHAR(50) NOT NULL,
     uf VARCHAR(2) NOT NULL,
     cep VARCHAR(9) NOT NULL UNIQUE
 );
+```
 
+```bash
 CREATE TABLE veiculo (
     numero BIGINT AUTO_INCREMENT PRIMARY KEY,
     placa VARCHAR(8) NOT NULL,
@@ -265,7 +270,8 @@ CREATE TABLE veiculo (
     dataCompra DATE NOT NULL,
     qtdPoltronas INT NOT NULL
 );
-
+```
+```bash
 CREATE TABLE passagem (
     idPassagem BIGINT AUTO_INCREMENT PRIMARY KEY,
     poltrona INT NOT NULL,
@@ -279,7 +285,8 @@ CREATE TABLE passagem (
     FOREIGN KEY (cidade_Origem) REFERENCES cidade(idCidade),  -- Referência à tabela de cidades
     FOREIGN KEY (cidade_Destino) REFERENCES cidade(idCidade)  -- Referência à tabela de cidades
 );
-
+```
+```bash
 -- Cria a função chamada "incrementa_dia"
 CREATE OR REPLACE FUNCTION incrementa_dia()
 RETURNS trigger AS $$  -- Define que a função retorna um "trigger"
@@ -293,7 +300,8 @@ BEGIN  -- Início do bloco da função
 
 END;  -- Fim do bloco da função
 $$ LANGUAGE plpgsql;  -- Define que a função utiliza a linguagem PL/pgSQL
-
+```
+```bash
 -- Cria uma trigger chamada "trigger_incrementa_dia"
 CREATE TRIGGER trigger_incrementa_dia
 -- Especifica que a trigger será acionada antes de um INSERT na tabela "passagem"
@@ -302,7 +310,7 @@ BEFORE INSERT ON passagem
 FOR EACH ROW
 -- Define que a trigger vai executar a função "incrementa_dia"
 EXECUTE FUNCTION incrementa_dia();
-
+```
 2. Clone o repository: git clone https://github.com/FilipeMagal/Passagens-Rodoviarias-API-REST.git
 3. Compile e execute 
 4. Após compilar, o spring security irá criar um token
